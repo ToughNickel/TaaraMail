@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>Upload the Screening file(s)</h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="document" />
+    <input type="file" name="vlz_report" />
+    <button type="submit">Upload Screener Files</button>
+</form>
+{% endblock %}
