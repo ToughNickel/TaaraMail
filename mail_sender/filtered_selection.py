@@ -42,7 +42,7 @@ def filtred_selected_mail_sender(access_token, filename, vlz_report):
     level_up_body = "<html>" \
                     "<body>" \
                     "<a href=\"https://www.vmware.com/taara/ rel=\"_alt\">" \
-                    "\"<img src=\"cid:logo_support\">" \
+                    "<img src=\"cid:logo_support\">" \
                     "</a>" \
                     "<br><br>" \
                     "Dear Candidate," \
