@@ -1,7 +1,360 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0328013b-57c0-470f-acef-05705eed4c84" name="Default Changelist" comment="" />
+    <list default="true" id="0328013b-57c0-470f-acef-05705eed4c84" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/css/summernote-bs4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/css/summernote-bs4.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/css/summernote-lite.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/css/summernote-lite.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/css/summernote.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/css/summernote.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/Gruntfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/MAINTAIN.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/font/summernote.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/font/summernote.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/font/summernote.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-ar-AR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-ar-AR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-bg-BG.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-bg-BG.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-ca-ES.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-ca-ES.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-cs-CZ.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-cs-CZ.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-da-DK.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-da-DK.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-de-DE.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-de-DE.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-el-GR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-el-GR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-es-ES.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-es-ES.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-es-EU.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-es-EU.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-fa-IR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-fa-IR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-fi-FI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-fi-FI.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-fr-FR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-fr-FR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-gl-ES.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-gl-ES.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-he-IL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-he-IL.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-hr-HR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-hr-HR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-hu-HU.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-hu-HU.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-id-ID.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-id-ID.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-it-IT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-it-IT.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-ja-JP.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-ja-JP.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-ko-KR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-ko-KR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-lt-LT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-lt-LT.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-lt-LV.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-lt-LV.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-mn-MN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-mn-MN.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-nb-NO.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-nb-NO.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-nl-NL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-nl-NL.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-pl-PL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-pl-PL.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-pt-BR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-pt-BR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-pt-PT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-pt-PT.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-ro-RO.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-ro-RO.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-ru-RU.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-ru-RU.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-sk-SK.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-sk-SK.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-sl-SI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-sl-SI.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-sr-RS-Latin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-sr-RS-Latin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-sr-RS.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-sr-RS.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-sv-SE.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-sv-SE.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-ta-IN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-ta-IN.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-th-TH.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-th-TH.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-tr-TR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-tr-TR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-uk-UA.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-uk-UA.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-vi-VN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-vi-VN.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-zh-CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-zh-CN.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-zh-TW.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/lang/summernote-zh-TW.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/summernote-bs4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/summernote-bs4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/summernote-bs4.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/summernote-bs4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/summernote-lite.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/summernote-lite.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/summernote-lite.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/summernote.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/summernote.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/summernote.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/dist/summernote.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/examples/airmode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/examples/bs2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/examples/bs3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/examples/bs4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/examples/codemirror.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/examples/codeview-filter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/examples/custom-style.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/examples/example.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/examples/external-api.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/examples/hint-emoji.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/examples/hint-symbols_mathematical-symbols_Greek-letters.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/examples/hint-userdefine.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/examples/ie8.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/examples/jquery-custom-event.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/examples/lang.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/examples/link-blank.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/examples/lite.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/examples/ondialog-multitab.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/examples/ondialog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/examples/placeholder.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/examples/plugin-hello.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/examples/symbols_mathematical-symbols_Greek-letters.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/examples/textarea.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/examples/toolbar-container.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/examples/with-google-font.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/grunts/grunt-build.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/karma.ci.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/karma.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-ar-AR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-bg-BG.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-ca-ES.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-cs-CZ.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-da-DK.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-de-DE.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-el-GR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-es-ES.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-es-EU.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-fa-IR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-fi-FI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-fr-FR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-gl-ES.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-he-IL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-hr-HR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-hu-HU.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-id-ID.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-it-IT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-ja-JP.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-ko-KR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-lt-LT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-lt-LV.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-mn-MN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-nb-NO.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-nl-NL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-pl-PL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-pt-BR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-pt-PT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-ro-RO.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-ru-RU.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-sk-SK.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-sl-SI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-sr-RS-Latin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-sr-RS.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-sv-SE.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-ta-IN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-th-TH.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-tr-TR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-uk-UA.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-uz-UZ.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-vi-VN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-zh-CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/lang/summernote-zh-TW.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/layout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/plugin/databasic/summernote-ext-databasic.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/plugin/databasic/summernote-ext-databasic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/plugin/hello/summernote-ext-hello.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/plugin/specialchars/summernote-ext-specialchars.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/align-center.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/align-indent.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/align-justify.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/align-left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/align-outdent.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/align-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/align.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/arrow-circle-down.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/arrow-circle-left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/arrow-circle-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/arrow-circle-up.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/arrows-alt.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/arrows-h.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/arrows-v.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/bold.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/caret.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/chain-broken.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/close.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/code.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/col-after.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/col-before.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/col-remove.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/eraser.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/float-left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/float-none.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/float-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/font.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/frame.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/italic.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/link.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/magic.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/menu-check.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/minus.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/orderedlist.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/pencil.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/picture.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/question.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/redo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/rollback.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/row-above.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/row-below.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/row-remove.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/special-character.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/square.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/strikethrough.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/subscript.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/summernote.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/superscript.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/table.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/templates/summernote.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/templates/summernote.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/text-height.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/trash.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/underline.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/undo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/unorderedlist.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/icons/video.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/Context.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/core/async.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/core/dom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/core/env.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/core/func.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/core/key.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/core/lists.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/core/range.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/editing/Bullet.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/editing/History.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/editing/Style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/editing/Table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/editing/Typing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/module/AirPopover.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/module/AutoLink.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/module/AutoReplace.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/module/AutoSync.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/module/Buttons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/module/Clipboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/module/Codeview.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/module/Dropzone.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/module/Editor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/module/Fullscreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/module/Handle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/module/HelpDialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/module/HintPopover.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/module/ImageDialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/module/ImagePopover.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/module/LinkDialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/module/LinkPopover.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/module/Placeholder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/module/Statusbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/module/TablePopover.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/module/Toolbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/module/VideoDialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/renderer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/settings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/base/summernote-en-US.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/bs3/settings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/bs3/ui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/bs4/settings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/bs4/ui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/lite/settings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/lite/ui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/lite/ui/DropdownUI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/lite/ui/ModalUI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/lite/ui/PopoverUI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/lite/ui/TooltipUI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/js/summernote.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/less/elements.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/less/elements.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/less/lite-ui/all.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/less/lite-ui/btn-group.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/less/lite-ui/buttons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/less/lite-ui/common.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/less/lite-ui/dropdown.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/less/lite-ui/form.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/less/lite-ui/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/less/lite-ui/mixins/buttons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/less/lite-ui/modal.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/less/lite-ui/popover.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/less/lite-ui/toolbar.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/less/lite-ui/tooltip.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/less/lite-ui/variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/less/summernote-bs4.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/less/summernote-bs4.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/less/summernote-lite.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/less/summernote.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/src/less/summernote.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/summernote-bs4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/summernote-bs4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/summernote-bs4.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/summernote-bs4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/summernote-lite.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/summernote-lite.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/summernote-lite.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/summernote.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/summernote.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/summernote.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/summernote.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/test/base/Context.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/test/base/core/dom.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/test/base/core/func.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/test/base/core/key.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/test/base/core/lists.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/test/base/core/range.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/test/base/editing/Table.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/test/base/editing/Typing.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/test/base/editing/style.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/test/base/module/Buttons.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/test/base/module/Codeview.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/test/base/module/Editor.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/test/base/module/Fullscreen.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/test/base/module/LinkDialog.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/test/base/module/VideoDialog.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/test/chaidom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/static/js/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaaraMail/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/TaaraMail/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaaraMail/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/TaaraMail/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mail_sender/excel-reader-test.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/mail_sender/excel-reader-test.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mail_sender/templates/customise-general.html" beforeDir="false" afterPath="$PROJECT_DIR$/mail_sender/templates/customise-general.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mail_sender/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/mail_sender/templates/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mail_sender/templates/upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/mail_sender/templates/upload.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mail_sender/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mail_sender/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vlz_report.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/vlz_report.xlsx" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +366,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mail_sender/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+            <state relative-caret-position="120">
+              <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -23,25 +376,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mail_sender/views.py">
+        <entry file="file://$PROJECT_DIR$/mail_sender/templates/sentMail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mail_sender/filtered_selection.py">
+        <entry file="file://$PROJECT_DIR$/mail_sender/templates/customise-general.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="225">
+              <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -49,8 +396,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mail_sender/templates/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="79" selection-start-line="12" selection-start-column="79" selection-end-line="12" selection-end-column="79" />
+            <state relative-caret-position="300">
+              <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -59,36 +406,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mail_sender/static/css/home.css">
+        <entry file="file://$PROJECT_DIR$/TaaraMail/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+            <state relative-caret-position="705">
+              <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mail_sender/static/css/layout.css">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mail_sender/outlookservice.py">
+        <entry file="file://$PROJECT_DIR$/mail_sender/filtered_selection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+            <state relative-caret-position="3510">
+              <caret line="237" column="59" selection-start-line="237" selection-start-column="59" selection-end-line="237" selection-end-column="59" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mail_sender/templates/sentMail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -96,8 +429,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mail_sender/templates/upload.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+            <state relative-caret-position="180">
+              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -105,8 +438,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mail_sender/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="315">
+              <caret line="21" column="135" selection-start-line="21" selection-start-column="135" selection-end-line="21" selection-end-column="135" />
             </state>
           </provider>
         </entry>
@@ -121,6 +454,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>&quot;</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -133,23 +471,24 @@
         <option value="$PROJECT_DIR$/filtered_selection.py" />
         <option value="$PROJECT_DIR$/mail_sender/static/css/home.css" />
         <option value="$PROJECT_DIR$/mail_sender/outlookservice.py" />
-        <option value="$PROJECT_DIR$/TaaraMail/urls.py" />
-        <option value="$PROJECT_DIR$/mail_sender/urls.py" />
-        <option value="$PROJECT_DIR$/TaaraMail/settings.py" />
-        <option value="$PROJECT_DIR$/mail_sender/views.py" />
-        <option value="$PROJECT_DIR$/mail_sender/templates/upload.html" />
-        <option value="$PROJECT_DIR$/mail_sender/templates/sentMail.html" />
-        <option value="$PROJECT_DIR$/mail_sender/filtered_selection.py" />
         <option value="$PROJECT_DIR$/mail_sender/static/css/layout.css" />
-        <option value="$PROJECT_DIR$/mail_sender/templates/layout.html" />
         <option value="$PROJECT_DIR$/mail_sender/templates/home.html" />
+        <option value="$PROJECT_DIR$/mail_sender/templates/upload.html" />
+        <option value="$PROJECT_DIR$/mail_sender/filtered_selection.py" />
+        <option value="$PROJECT_DIR$/mail_sender/templates/customise.html" />
+        <option value="$PROJECT_DIR$/mail_sender/views.py" />
+        <option value="$PROJECT_DIR$/mail_sender/templates/sentMail.html" />
+        <option value="$PROJECT_DIR$/TaaraMail/settings.py" />
+        <option value="$PROJECT_DIR$/mail_sender/urls.py" />
+        <option value="$PROJECT_DIR$/TaaraMail/urls.py" />
+        <option value="$PROJECT_DIR$/mail_sender/templates/layout.html" />
+        <option value="$PROJECT_DIR$/mail_sender/templates/customise-general.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="1680" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="width" value="1680" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -157,7 +496,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -173,12 +511,30 @@
             <path>
               <item name="TaaraMail" type="b2602c69:ProjectViewProjectNode" />
               <item name="TaaraMail" type="462c0819:PsiDirectoryNode" />
+              <item name="mail_sender" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TaaraMail" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TaaraMail" type="462c0819:PsiDirectoryNode" />
+              <item name="mail_sender" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TaaraMail" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TaaraMail" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TaaraMail" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TaaraMail" type="462c0819:PsiDirectoryNode" />
               <item name="TaaraMail" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -187,6 +543,10 @@
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mail_sender/static/js" />
+      <recent name="$PROJECT_DIR$/mail_sender/static/css" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/mail_sender" />
       <recent name="$PROJECT_DIR$/mail_sender/static/css" />
@@ -236,20 +596,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1680" y="0" width="1920" height="1080" extended-state="0" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1269089" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11814346" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32959184" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32970297" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4930681" weight="0.26435643" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32970297" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4930681" visible="true" weight="0.25408164" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5069319" side_tool="true" weight="0.272449" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32970297" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -285,6 +646,20 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Pushing the changes" />
@@ -301,59 +676,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TaaraMail/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="78" lean-forward="true" selection-start-line="30" selection-start-column="78" selection-end-line="30" selection-end-column="78" />
-          <folding>
-            <element signature="e#633#665#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mail_sender/authhelper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1470">
-          <caret line="102" selection-start-line="102" selection-end-line="102" />
+        <state relative-caret-position="915">
+          <caret line="61" column="62" lean-forward="true" selection-start-line="61" selection-start-column="62" selection-end-line="61" selection-end-column="62" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TaaraMail/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mail_sender/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/media/logo.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/mail_sender/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
+        <state relative-caret-position="1020">
+          <caret line="75" column="52" selection-start-line="75" selection-start-column="52" selection-end-line="75" selection-end-column="52" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mail_sender/templates/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="79" selection-start-line="12" selection-start-column="79" selection-end-line="12" selection-end-column="79" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -380,32 +721,104 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mail_sender/templates/sentMail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mail_sender/templates/upload.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mail_sender/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="90">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mail_sender/filtered_selection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+        <state relative-caret-position="3510">
+          <caret line="237" column="59" selection-start-line="237" selection-start-column="59" selection-end-line="237" selection-end-column="59" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail_sender/templates/upload.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail_sender/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="135" selection-start-line="21" selection-start-column="135" selection-end-line="21" selection-end-column="135" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaaraMail/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaaraMail/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="58" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
+          <folding>
+            <element signature="e#633#665#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail_sender/static/css/summernote-bs4.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail_sender/static/js/summernote-bs4.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail_sender/static/js/summernote-bs4.js.map">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail_sender/static/css/summernote-bs4.js.map">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail_sender/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail_sender/templates/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail_sender/static/js/base/core/dom.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail_sender/static/js/icons/bold.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail_sender/static/js/summernote.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail_sender/static/js/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail_sender/templates/customise-general.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
         </state>
       </provider>
     </entry>

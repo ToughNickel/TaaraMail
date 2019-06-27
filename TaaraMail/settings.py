@@ -45,6 +45,7 @@ METHOD_2_BASE64 = "/9j/4AAQSkZJRgABAQEAeAB4AAD/2wBDAAoHBwkHBgoJCAkLCwoMDxkQDw4OD
 
 INSTALLED_APPS = [
     'mail_sender',
+    'froala_editor',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
