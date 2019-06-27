@@ -10,5 +10,6 @@ urlpatterns = [
     url(r'^gettoken/$', views.gettoken, name='gettoken'),
     url(r'^mail/$', views.mail, name='mail'),
     url(r'^send/$', views.send, name='send'),
-    url(r'^upload/$', views.upload, name='upload')
+    url(r'^upload/$', views.upload, name='upload'),
+    url(r'^customise/$', views.customise, name='customise')
 ]

@@ -68,5 +68,9 @@ def upload(request):
         fs.save(myfile_2.name, myfile_2)
         request.session['filename'] = myfile.name
         request.session['vlz_report'] = myfile_2.name
-        return HttpResponseRedirect(reverse("mail_sender:send"))
+        return HttpResponseRedirect(reverse("mail_sender:customise"))
     return render(request, 'upload.html')
+
+
+def customise(request):
+    return render(request, 'customise-general.html')
