@@ -68,9 +68,21 @@ def upload(request):
         fs.save(myfile_2.name, myfile_2)
         request.session['filename'] = myfile.name
         request.session['vlz_report'] = myfile_2.name
+        request.session['parameter_count'] = 0
         return HttpResponseRedirect(reverse("mail_sender:customise"))
     return render(request, 'upload.html')
 
 
 def customise(request):
+    if request.method == 'GET':
+        parameter_count = request.sesssion['parameter_count']
+        parameter_list = []
+        parameter_list_value = []
+        for i in range(1,parameter_count+1):
+            gen_para = 'gen-para-' + i
+            gen_para_value = 'gen-para-' + i + '-value'
+            gen_para_blank_check = ''
+            gen_para_not_blank_check = ''
+            # parameter_list.append(request.GET[])
+            # parameter_list_value.append(request.GET[])
     return render(request, 'customise-general.html')
