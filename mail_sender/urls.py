@@ -13,5 +13,8 @@ urlpatterns = [
     url(r'^mail/$', views.mail, name='mail'),
     url(r'^send/$', views.send, name='send'),
     url(r'^upload/$', views.upload, name='upload'),
-    url(r'^customise/$', views.customise, name='customise')
+    url(r'^customise/$', views.customise, name='customise'),
+    url(r'^confirm_gen/', views.confirm_gen, name='confirm_gen'),
+    url(r'^customise_vlz/$', views.customise_vlz, name='customise_vlz'),
+    url(r'^confirm_vlz/', views.confirm_vlz, name='confirm_vlz')
 ]

@@ -25,7 +25,6 @@ urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^mail_sender/', include('mail_sender.urls', namespace='mail_sender')),
     path('admin/', admin.site.urls),
-    url(r'^froala_editor/', include('froala_editor.urls'))
 ]
 
 if settings.DEBUG:

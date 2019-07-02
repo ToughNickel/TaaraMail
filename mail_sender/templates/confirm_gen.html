@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirm General report's Use</title>
+</head>
+<body>
+
+{% extends "layout.html" %}
+{% block content %}
+
+<h1>Reached here after sending a mail from General report !</h1>
+
+<!--<form method="get">-->
+    <!--{% csrf_token %}-->
+        <!--<label><span>Do you want to send more mails from General report ?</span></label>-->
+        <!--<div class="radio">-->
+            <!--<label><input type="radio" id="Yes" name="Yes">Yes</label>-->
+        <!--</div>-->
+         <!--<div class="radio">-->
+            <!--<label><input type="radio" id="No" name="No">No, go to VLZ report</label>-->
+        <!--</div>-->
+        <!--<div class="form-group">-->
+            <!--<input type="submit" id="submit" class="form-control form-control-lg" value="Submit"/>-->
+        <!--</div>-->
+<!--</form>-->
+
+
+<form action="{% url 'mail_sender:confirm_gen' %}" method="post" novalidate>
+     <table>
+         {{ form.as_ul }}
+         <tr>
+             <td>&nbsp;</td>
+             <td><input type="submit" value="Submit"></td>
+         </tr>
+     </table>
+     {% csrf_token %}
+</form>
+
+{% endblock %}
+
+</body>
+</html>
