@@ -5,7 +5,9 @@ from django.http import HttpResponse, HttpResponseRedirect
 from .authhelper import get_signin_url, get_token_from_code, get_access_token
 from .outlookservice import get_me, get_my_messages
 from .confirm_gen import ConfirmForm
+from .confirm_vlz import ConfirmFormVLZ
 from django.core.files.storage import FileSystemStorage
+from .customise_general import customise_general
 
 
 def home(request):
@@ -74,34 +76,51 @@ def upload(request):
 
 
 def customise(request):
+    access_token = get_access_token(request=request,
+                                    redirect_uri=request.build_absolute_uri(reverse('mail_sender:gettoken')))
     if request.method == 'POST':
         parameter_count = 1
-        # parameter_count = request.session['parameter_count']
-        parameter_list = []
-        parameter_list_value = []
-        for x in range(1,parameter_count+1):
+        if 'parameter_count' in request.COOKIES:
+            parameter_count = int(request.COOKIES['parameter_count'])
+        request.COOKIES['parameter_count'] = '1'
+        parameter_list = {}
+        for x in range(1, parameter_count + 1):
             i = str(x)
             gen_para = 'gen-para-' + i
             gen_para_value = 'gen-para-' + i + '-value'
             gen_para_blank_check = 'gen-para-' + i + '-blank-check'
             gen_para_not_blank_check = 'gen-para-' + i + '-not-blank-check'
-            parameter_list.append(gen_para)
-            if request.POST.get(gen_para_not_blank_check, True):
-                parameter_list_value.append("NOT-BLANK")
-            elif request.POST.get(gen_para_blank_check, True):
-                parameter_list_value.append("BLANK")
-            else:
-                parameter_list_value.append(gen_para_value)
+
+            parameter_list[request.POST[gen_para]] = request.POST[gen_para_value]
+
+            # if request.POST[gen_para_blank_check] == "on":
+            #     parameter_list[gen_para] = "BLANK"
+            # elif request.POST[gen_para_not_blank_check] == "on":
+            #     parameter_list[gen_para] = "NOT_BLANK"
+            # else:
+            #     parameter_list[gen_para] = request.POST[gen_para_value]
+
+        subject = request.POST['email-part-subject']
+        body = "test body"
+        customise_general(access_token, request.session['filename'], parameter_list, subject, body)
         return HttpResponseRedirect(reverse("mail_sender:confirm_gen"))
     return render(request, 'customise-general.html')
 
 
 def confirm_gen(request):
+    request.COOKIES['parameter_count'] = '1'
     form = ConfirmForm(request.POST)
     if request.method == 'POST':
         if form.is_valid():
-            answer = form.cleaned_data['yes']
-            print(answer)
+            answer = form.cleaned_data['like']
+            answer = dict(form.fields['like'].choices)[answer]
+
+            if answer == "Yes":
+                return HttpResponseRedirect(reverse("mail_sender:customise"))
+            else:
+                return HttpResponseRedirect(reverse("mail_sender:customise_vlz"))
+        else:
+            form = ConfirmForm()
     return render(request, 'confirm_gen.html', {'form': form})
 
 
@@ -112,9 +131,7 @@ def customise_vlz(request):
 
 
 def confirm_vlz(request):
-    if request.method == 'GET':
-        if request.POST.get('vlz-confirm-select', True):
-            return HttpResponseRedirect(reverse("mail_sender:customise_vlz"))
-        else:
-            return HttpResponseRedirect(reverse("mail_sender:send"))
-    return render(request, "confirm_vlz.html")
+    form = ConfirmFormVLZ(request.POST)
+    if request.method == 'POST':
+        return HttpResponseRedirect(reverse("mail_sender:send"))
+    return render(request, 'confirm_vlz.html', {'form': form})

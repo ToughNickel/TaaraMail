@@ -2,19 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0328013b-57c0-470f-acef-05705eed4c84" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mail_sender/confirm_gen.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mail_sender/customise-general.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mail_sender/templates/confirm_gen.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mail_sender/templates/confirm_vlz.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mail_sender/templates/customise_vlz.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail_sender/customise_general.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaaraMail/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/TaaraMail/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaaraMail/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/TaaraMail/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mail_sender/customise-general.py" beforeDir="false" afterPath="$PROJECT_DIR$/mail_sender/confirm_vlz.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mail_sender/excel-reader-test.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/excel-reader-test.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mail_sender/templates/confirm_gen.html" beforeDir="false" afterPath="$PROJECT_DIR$/mail_sender/templates/confirm_gen.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mail_sender/templates/confirm_vlz.html" beforeDir="false" afterPath="$PROJECT_DIR$/mail_sender/templates/confirm_vlz.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mail_sender/templates/customise-general.html" beforeDir="false" afterPath="$PROJECT_DIR$/mail_sender/templates/customise-general.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mail_sender/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/mail_sender/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mail_sender/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mail_sender/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mail_sender/templates/upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/mail_sender/templates/upload.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mail_sender/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mail_sender/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/excel-reader-test.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/excel-reader-test_55izxzf.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/vlz_report.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/vlz_report_vX45aLQ.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vlz_report.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/vlz_report.xlsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mail_sender/templates/customise-general.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1185">
-              <caret line="79" column="95" selection-start-line="79" selection-start-column="95" selection-end-line="79" selection-end-column="95" />
+            <state relative-caret-position="459">
+              <caret line="43" column="73" lean-forward="true" selection-start-line="43" selection-start-column="73" selection-end-line="43" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -36,17 +38,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mail_sender/templates/customise_vlz.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+            <state relative-caret-position="1110">
+              <caret line="74" column="36" selection-start-line="74" selection-start-column="36" selection-end-line="74" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mail_sender/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="81" column="44" lean-forward="true" selection-start-line="81" selection-start-column="44" selection-end-line="81" selection-end-column="44" />
+            <state relative-caret-position="339">
+              <caret line="115" column="62" lean-forward="true" selection-start-line="115" selection-start-column="62" selection-end-line="115" selection-end-column="62" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -55,31 +57,64 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mail_sender/confirm_gen.py">
+        <entry file="file://$PROJECT_DIR$/mail_sender/customise_general.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="54" lean-forward="true" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mail_sender/templates/confirm_gen.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+            <state relative-caret-position="360">
+              <caret line="24" column="69" lean-forward="true" selection-start-line="24" selection-start-column="69" selection-end-line="24" selection-end-column="69" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mail_sender/urls.py">
+        <entry file="file://$PROJECT_DIR$/mail_sender/conditionTester.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="65" lean-forward="true" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
+            <state relative-caret-position="315">
+              <caret line="21" column="76" lean-forward="true" selection-start-line="21" selection-start-column="76" selection-end-line="21" selection-end-column="76" />
               <folding>
-                <element signature="e#0#32#0" expanded="true" />
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mail_sender/filtered_selection.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="14" column="59" lean-forward="true" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mail_sender/confirm_gen.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mail_sender/confirm_vlz.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mail_sender/templates/confirm_gen.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="30" column="52" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -87,8 +122,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mail_sender/templates/confirm_vlz.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="94" selection-start-line="24" selection-start-column="94" selection-end-line="24" selection-end-column="94" />
+            <state relative-caret-position="450">
+              <caret line="30" column="52" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -122,23 +157,27 @@
         <option value="$PROJECT_DIR$/mail_sender/static/css/home.css" />
         <option value="$PROJECT_DIR$/mail_sender/outlookservice.py" />
         <option value="$PROJECT_DIR$/mail_sender/static/css/layout.css" />
-        <option value="$PROJECT_DIR$/mail_sender/templates/upload.html" />
-        <option value="$PROJECT_DIR$/mail_sender/filtered_selection.py" />
         <option value="$PROJECT_DIR$/mail_sender/templates/customise.html" />
         <option value="$PROJECT_DIR$/mail_sender/templates/sentMail.html" />
         <option value="$PROJECT_DIR$/mail_sender/templates/layout.html" />
         <option value="$PROJECT_DIR$/TaaraMail/settings.py" />
         <option value="$PROJECT_DIR$/TaaraMail/urls.py" />
-        <option value="$PROJECT_DIR$/mail_sender/customise-general.py" />
         <option value="$PROJECT_DIR$/mail_sender/templates/home.html" />
         <option value="$PROJECT_DIR$/mail_sender/urls.py" />
         <option value="$PROJECT_DIR$/mail_sender/templates/customise_vlz.html" />
-        <option value="$PROJECT_DIR$/mail_sender/templates/confirm_vlz.html" />
-        <option value="$PROJECT_DIR$/mail_sender/templates/customise-general.html" />
         <option value="$PROJECT_DIR$/confirm_gen.py" />
         <option value="$PROJECT_DIR$/mail_sender/confirm_gen.py" />
-        <option value="$PROJECT_DIR$/mail_sender/views.py" />
+        <option value="$PROJECT_DIR$/mail_sender/confirm_vlz.py" />
+        <option value="$PROJECT_DIR$/mail_sender/templates/upload.html" />
+        <option value="$PROJECT_DIR$/mail_sender/templates/confirm_vlz.html" />
         <option value="$PROJECT_DIR$/mail_sender/templates/confirm_gen.html" />
+        <option value="$PROJECT_DIR$/mail_sender/Parameter.py" />
+        <option value="$PROJECT_DIR$/mail_sender/filtered_selection.py" />
+        <option value="$PROJECT_DIR$/mail_sender/customise-general.py" />
+        <option value="$PROJECT_DIR$/mail_sender/customise_general.py" />
+        <option value="$PROJECT_DIR$/mail_sender/templates/customise-general.html" />
+        <option value="$PROJECT_DIR$/mail_sender/conditionTester.py" />
+        <option value="$PROJECT_DIR$/mail_sender/views.py" />
       </list>
     </option>
   </component>
@@ -153,7 +192,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -181,6 +219,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -189,14 +228,15 @@
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/mail_sender" />
-      <recent name="$PROJECT_DIR$/mail_sender/static/css" />
-      <recent name="$PROJECT_DIR$/mail_sender/static" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/mail_sender/static/js" />
       <recent name="$PROJECT_DIR$/mail_sender/static/css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/mail_sender" />
+      <recent name="$PROJECT_DIR$/mail_sender/static/css" />
+      <recent name="$PROJECT_DIR$/mail_sender/static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -256,7 +296,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32959184" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32970297" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4930681" visible="true" weight="0.22673267" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4930681" visible="true" weight="0.42376238" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5069319" side_tool="true" weight="0.272449" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32970297" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -396,33 +436,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mail_sender/filtered_selection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mail_sender/templates/upload.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="56" lean-forward="true" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mail_sender/customise-general.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaaraMail/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mail_sender/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -440,58 +453,110 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mail_sender/templates/customise-general.html">
+    <entry file="file://$PROJECT_DIR$/mail_sender/templates/upload.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
-          <caret line="79" column="95" selection-start-line="79" selection-start-column="95" selection-end-line="79" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mail_sender/templates/customise_vlz.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mail_sender/templates/confirm_vlz.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="94" selection-start-line="24" selection-start-column="94" selection-end-line="24" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mail_sender/confirm_gen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="54" lean-forward="true" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
+        <state relative-caret-position="255">
+          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mail_sender/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="65" lean-forward="true" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
+        <state relative-caret-position="187">
+          <caret line="11" column="57" lean-forward="true" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mail_sender/views.py">
+    <entry file="file://$PROJECT_DIR$/mail_sender/Parameter.py" />
+    <entry file="file://$PROJECT_DIR$/TaaraMail/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="81" column="44" lean-forward="true" selection-start-line="81" selection-start-column="44" selection-end-line="81" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="690">
+          <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail_sender/templates/customise_vlz.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1110">
+          <caret line="74" column="36" selection-start-line="74" selection-start-column="36" selection-end-line="74" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail_sender/confirm_gen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail_sender/confirm_vlz.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mail_sender/templates/confirm_gen.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
-          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+          <caret line="30" column="52" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail_sender/templates/confirm_vlz.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="52" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail_sender/filtered_selection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="14" column="59" lean-forward="true" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail_sender/templates/customise-general.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="43" column="73" lean-forward="true" selection-start-line="43" selection-start-column="73" selection-end-line="43" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail_sender/customise_general.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="69" lean-forward="true" selection-start-line="24" selection-start-column="69" selection-end-line="24" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail_sender/conditionTester.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="76" lean-forward="true" selection-start-line="21" selection-start-column="76" selection-end-line="21" selection-end-column="76" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail_sender/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="115" column="62" lean-forward="true" selection-start-line="115" selection-start-column="62" selection-end-line="115" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

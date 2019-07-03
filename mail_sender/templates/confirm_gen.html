@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Confirm General report's Use</title>
+    <title>Confirming about General report usage</title>
 </head>
 <body>
 
@@ -27,13 +27,8 @@
 
 
 <form action="{% url 'mail_sender:confirm_gen' %}" method="post" novalidate>
-     <table>
-         {{ form.as_ul }}
-         <tr>
-             <td>&nbsp;</td>
-             <td><input type="submit" value="Submit"></td>
-         </tr>
-     </table>
+     {{ form.as_p }}
+         <p><input type="submit" value="Submit"></p>
      {% csrf_token %}
 </form>
 

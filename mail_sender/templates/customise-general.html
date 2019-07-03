@@ -17,6 +17,8 @@
 
 <script>
   var i = 1;
+  setCookie('parameter_count', i, 1);
+
   function addParameterGroup(){
     var node = document.getElementById('para-grp-1');
     var clone = node.cloneNode(true);
@@ -26,12 +28,20 @@
 
 
     var cloneChild = document.getElementById('para-grp-' + i).childNodes;
-    cloneChild[3].childNodes[3].id = "gen-para-" + i;
-    cloneChild[5].childNodes[3].id = "gen-para-" + i + "-value";
-    cloneChild[7].childNodes[1].id = "gen-para-" + i + "-blank-check";
-    cloneChild[9].childNodes[1].id = "gen-para-" + i + "-not-blank-check";
+    cloneChild[3].childNodes[3].id = "gen-para-" + i;cloneChild[3].childNodes[3].name = "gen-para-" + i;
+    cloneChild[5].childNodes[3].id = "gen-para-" + i + "-value";cloneChild[5].childNodes[3].name = "gen-para-" + i + "-value";
+    cloneChild[7].childNodes[1].id = "gen-para-" + i + "-blank-check";cloneChild[7].childNodes[1].name = "gen-para-" + i + "-blank-check";
+    cloneChild[9].childNodes[1].id = "gen-para-" + i + "-not-blank-check";cloneChild[9].childNodes[1].name = "gen-para-" + i + "-not-blank-check";
 
-    sessionStorage.setItem("parameter_count",i);
+
+    setCookie('parameter_count', i, 1);
+  }
+
+  function setCookie(cname, cvalue, exdays) {
+      var d = new Date();
+      d.setTime(d.getTime() + (exdays*24*60*60*1000));
+      var expires = "expires="+ d.toUTCString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
   }
 </script>
 
@@ -39,9 +49,10 @@
     $(document).ready(function() {
       $('#summernote').summernote();
     });
+
 </script>
 
-<form method="post" enctype="multipart/form-data">
+<form action="{% url 'mail_sender:customise' %}" method="post" enctype="multipart/form-data">
     {% csrf_token %}
   <!--<div class="form-group">-->
     <!--<label for="exampleFormControlInput1">Email address</label>-->
@@ -50,39 +61,40 @@
     <div id="para-list">
     <div id="para-grp-1">
         <div class="form-group"><br><br></div>
-  <div class="form-group">
-    <label for="gen-para-1">Parameter select</label>
-    <select class="form-control form-control-lg" id="gen-para-1">
-      <option>Email</option>
-      <option>First Name</option>
-      <option>Last Name</option>
-      <option>Company</option>
-      <option>Mobile Phone</option>
-      <option>Address</option>
-      <option>City</option>
-      <option>Last Working</option>
-      <option>Specialization</option>
-      <option>Education</option>
-      <option>Source</option>
-      <option>My Learn Flag</option>
-      <option>Created On</option>
-      <option>ID Proof</option>
-      <option>Delete</option>
-    </select>
-  </div>
-    <div class="form-group">
-        <label for="gen-para-1-value">Value Desired</label>
-        <input id="gen-para-1-value" class="form-control form-control-lg" type="text" placeholder="Value">
-    </div>
+      <div class="form-group">
+        <label for="gen-para-1">Parameter select</label>
+        <select class="form-control form-control-lg" id="gen-para-1" name="gen-para-1">
+            <option>#</option>
+          <option>Email</option>
+          <option>First Name</option>
+          <option>Last Name</option>
+          <option>Company</option>
+          <option>Mobile Phone</option>
+          <option>Address</option>
+          <option>City</option>
+          <option>Last Working</option>
+          <option>Specialization</option>
+          <option>Education</option>
+          <option>Source</option>
+          <option>My Learn Flag</option>
+          <option>Created On</option>
+          <option>ID Proof</option>
+          <option>Delete</option>
+        </select>
+      </div>
+        <div class="form-group">
+            <label for="gen-para-1-value">Value Desired</label>
+            <input id="gen-para-1-value" class="form-control form-control-lg" type="text" placeholder="Value" name="gen-para-1-value">
+        </div>
 
-    <div class="form-check checkbox">
-        <input type="checkbox" class="form-check-input" id="gen-para-1-blank-check">
-        <span><label class="form-check-label" for="gen-para-1-blank-check">Blank</label></span>
-    </div>
-    <div class="form-check checkbox">
-        <input type="checkbox" class="form-check-input" id="gen-para-1-not-blank-check">
-        <span><label class="form-check-label" for="gen-para-1-not-blank-check">Not Blank</label></span>
-    </div>
+        <div class="form-check checkbox">
+            <input type="checkbox" class="form-check-input" id="gen-para-1-blank-check" name="gen-para-1-blank-check">
+            <span><label class="form-check-label" for="gen-para-1-blank-check">Blank</label></span>
+        </div>
+        <div class="form-check checkbox">
+            <input type="checkbox" class="form-check-input" id="gen-para-1-not-blank-check" name="gen-para-1-not-blank-check">
+            <span><label class="form-check-label" for="gen-para-1-not-blank-check">Not Blank</label></span>
+        </div>
 </div>
     </div>
 
@@ -94,13 +106,13 @@
 
     <div id="email-part">
         <div class="form-group">
-            <input type="text" id="email-part-subject" class="form-control form-control-lg" placeholder="Subject"/>
+            <input type="text" id="email-part-subject" class="form-control form-control-lg" placeholder="Subject" name="email-part-subject"/>
         </div>
         <!--<div class="form-group">-->
             <!--<textarea rows="10" id="email-part-body" class="form-control form-control-lg" placeholder="Body"></textarea>-->
         <!--</div>-->
         <div class="form-group">
-            <div id="summernote">Email Body</div>
+            <div id="summernote" name="summernote">Email Body</div>
         </div>
     </div>
   <!--<div class="form-group">-->
