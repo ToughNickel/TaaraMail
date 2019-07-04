@@ -16,5 +16,6 @@ urlpatterns = [
     url(r'^customise/$', views.customise, name='customise'),
     url(r'^confirm_gen/', views.confirm_gen, name='confirm_gen'),
     url(r'^customise_vlz/$', views.customise_vlz, name='customise_vlz'),
-    url(r'^confirm_vlz/', views.confirm_vlz, name='confirm_vlz')
+    url(r'^confirm_vlz/', views.confirm_vlz, name='confirm_vlz'),
+    url(r'^froala_editor/', include('froala_editor.urls')),
 ]

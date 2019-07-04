@@ -25,6 +25,8 @@
 
 <script>
   var i = 1;
+  setCookie('parameter_count', i, 1);
+
   function addParameterGroup(){
     var node = document.getElementById('para-grp-1');
     var clone = node.cloneNode(true);
@@ -34,12 +36,19 @@
 
 
     var cloneChild = document.getElementById('para-grp-' + i).childNodes;
-    cloneChild[3].childNodes[3].id = "vlz-para-" + i;
-    cloneChild[5].childNodes[3].id = "vlz-para-" + i + "-value";
-    cloneChild[7].childNodes[1].id = "vlz-para-" + i + "-blank-check";
-    cloneChild[9].childNodes[1].id = "vlz-para-" + i + "-not-blank-check";
+    cloneChild[3].childNodes[3].id = "vlz-para-" + i;cloneChild[3].childNodes[3].name = "vlz-para-" + i;
+    cloneChild[5].childNodes[3].id = "vlz-para-" + i + "-value";cloneChild[5].childNodes[3].name = "vlz-para-" + i + "-value";
+    cloneChild[7].childNodes[1].id = "vlz-para-" + i + "-blank-check";cloneChild[7].childNodes[1].name = "vlz-para-" + i + "-blank-check";
+    cloneChild[9].childNodes[1].id = "vlz-para-" + i + "-not-blank-check";cloneChild[9].childNodes[1].name = "vlz-para-" + i + "-not-blank-check";
 
-    sessionStorage.setItem("parameter_count",i);
+    setCookie('parameter_count', i, 1);
+  }
+
+  function setCookie(cname, cvalue, exdays) {
+      var d = new Date();
+      d.setTime(d.getTime() + (exdays*24*60*60*1000));
+      var expires = "expires="+ d.toUTCString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
   }
 </script>
 
@@ -49,46 +58,33 @@
     });
 </script>
 
+
+    {{ form.media }}
+
 <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
-  <!--<div class="form-group">-->
-    <!--<label for="exampleFormControlInput1">Email address</label>-->
-    <!--<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">-->
-  <!--</div>-->
     <div id="para-list">
     <div id="para-grp-1">
         <div class="form-group"><br><br></div>
   <div class="form-group">
     <label for="vlz-para-1">Parameter select</label>
-    <select class="form-control form-control-lg" id="vlz-para-1">
-      <option>Email</option>
-      <option>First Name</option>
-      <option>Last Name</option>
-      <option>Company</option>
-      <option>Mobile Phone</option>
-      <option>Address</option>
-      <option>City</option>
-      <option>Last Working</option>
-      <option>Specialization</option>
-      <option>Education</option>
-      <option>Source</option>
-      <option>My Learn Flag</option>
-      <option>Created On</option>
-      <option>ID Proof</option>
-      <option>Delete</option>
+    <select class="form-control form-control-lg" id="vlz-para-1" name="vlz-para-1">
+      {% for parameter in parameters %}
+        <option> {{ parameter }} </option>
+        {% endfor %}
     </select>
   </div>
     <div class="form-group">
         <label for="vlz-para-1-value">Value Desired</label>
-        <input id="vlz-para-1-value" class="form-control form-control-lg" type="text" placeholder="Value">
+        <input id="vlz-para-1-value" class="form-control form-control-lg" type="text" placeholder="Value" name="vlz-para-1-value">
     </div>
 
     <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="vlz-para-1-blank-check">
+        <input type="checkbox" class="form-check-input" id="vlz-para-1-blank-check" name="vlz-para-1-blank-check">
         <span><label class="form-check-label" for="vlz-para-1-blank-check">Blank</label></span>
     </div>
     <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="vlz-para-1-not-blank-check">
+        <input type="checkbox" class="form-check-input" id="vlz-para-1-not-blank-check" name="vlz-para-1-not-blank-check">
         <span><label class="form-check-label" for="vlz-para-1-not-blank-check">Not Blank</label></span>
     </div>
 </div>
@@ -102,29 +98,12 @@
 
     <div id="email-part">
         <div class="form-group">
-            <input type="text" id="email-part-subject" class="form-control form-control-lg" placeholder="Subject"/>
+            <input type="text" id="email-part-subject" class="form-control form-control-lg" placeholder="Subject" name="email-part-subject"/>
         </div>
-        <!--<div class="form-group">-->
-            <!--<textarea rows="10" id="email-part-body" class="form-control form-control-lg" placeholder="Body"></textarea>-->
-        <!--</div>-->
-        <div class="form-group">
-            <div id="summernote">Email Body</div>
-        </div>
+        {{ form }}
     </div>
-  <!--<div class="form-group">-->
-    <!--<label for="exampleFormControlSelect2">Example multiple select</label>-->
-    <!--<select multiple class="form-control" id="exampleFormControlSelect2">-->
-      <!--<option>1</option>-->
-      <!--<option>2</option>-->
-      <!--<option>3</option>-->
-      <!--<option>4</option>-->
-      <!--<option>5</option>-->
-    <!--</select>-->
-  <!--</div>-->
-  <!--<div class="form-group">-->
-    <!--<label for="exampleFormControlTextarea1">Example textarea</label>-->
-    <!--<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>-->
-  <!--</div>-->
+
+    <br><br>
 
     <div class="form-group">
         <button type="submit" class="btn btn-primary form-control form-control-lg" id="Submit">Send Email</button>

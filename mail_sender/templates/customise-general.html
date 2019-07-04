@@ -47,39 +47,25 @@
 
 <script>
     $(document).ready(function() {
-      $('#summernote').summernote();
+      $('#email-part-body').summernote();
     });
 
 </script>
 
+{{ form.media }}
+
 <form action="{% url 'mail_sender:customise' %}" method="post" enctype="multipart/form-data">
     {% csrf_token %}
-  <!--<div class="form-group">-->
-    <!--<label for="exampleFormControlInput1">Email address</label>-->
-    <!--<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">-->
-  <!--</div>-->
     <div id="para-list">
     <div id="para-grp-1">
         <div class="form-group"><br><br></div>
       <div class="form-group">
         <label for="gen-para-1">Parameter select</label>
         <select class="form-control form-control-lg" id="gen-para-1" name="gen-para-1">
-            <option>#</option>
-          <option>Email</option>
-          <option>First Name</option>
-          <option>Last Name</option>
-          <option>Company</option>
-          <option>Mobile Phone</option>
-          <option>Address</option>
-          <option>City</option>
-          <option>Last Working</option>
-          <option>Specialization</option>
-          <option>Education</option>
-          <option>Source</option>
-          <option>My Learn Flag</option>
-          <option>Created On</option>
-          <option>ID Proof</option>
-          <option>Delete</option>
+
+            {% for parameter in parameters %}
+                <option>{{ parameter }}</option>
+            {% endfor %}
         </select>
       </div>
         <div class="form-group">
@@ -108,27 +94,11 @@
         <div class="form-group">
             <input type="text" id="email-part-subject" class="form-control form-control-lg" placeholder="Subject" name="email-part-subject"/>
         </div>
-        <!--<div class="form-group">-->
-            <!--<textarea rows="10" id="email-part-body" class="form-control form-control-lg" placeholder="Body"></textarea>-->
-        <!--</div>-->
-        <div class="form-group">
-            <div id="summernote" name="summernote">Email Body</div>
-        </div>
+
+        {{ form }}
     </div>
-  <!--<div class="form-group">-->
-    <!--<label for="exampleFormControlSelect2">Example multiple select</label>-->
-    <!--<select multiple class="form-control" id="exampleFormControlSelect2">-->
-      <!--<option>1</option>-->
-      <!--<option>2</option>-->
-      <!--<option>3</option>-->
-      <!--<option>4</option>-->
-      <!--<option>5</option>-->
-    <!--</select>-->
-  <!--</div>-->
-  <!--<div class="form-group">-->
-    <!--<label for="exampleFormControlTextarea1">Example textarea</label>-->
-    <!--<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>-->
-  <!--</div>-->
+
+    <br><br>
 
     <div class="form-group">
         <button type="submit" class="btn btn-primary form-control form-control-lg" id="Submit">Send Email</button>

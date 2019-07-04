@@ -8,12 +8,14 @@ from .confirm_gen import ConfirmForm
 from .confirm_vlz import ConfirmFormVLZ
 from django.core.files.storage import FileSystemStorage
 from .customise_general import customise_general
+from .froala_form_example import ExampleFroalaForm
+from .get_parameters import getParameters
 
 
 def home(request):
     redirect_uri = request.build_absolute_uri(reverse('mail_sender:gettoken'))
     sign_in_url = get_signin_url(redirect_uri)
-    context = {'signin_url' : sign_in_url}
+    context = {'signin_url': sign_in_url}
     return render(request, 'home.html', context)
 
 
@@ -78,6 +80,10 @@ def upload(request):
 def customise(request):
     access_token = get_access_token(request=request,
                                     redirect_uri=request.build_absolute_uri(reverse('mail_sender:gettoken')))
+
+    parameters = getParameters(filename=request.session['filename'])
+    form = ExampleFroalaForm(request.POST)
+
     if request.method == 'POST':
         parameter_count = 1
         if 'parameter_count' in request.COOKIES:
@@ -93,18 +99,17 @@ def customise(request):
 
             parameter_list[request.POST[gen_para]] = request.POST[gen_para_value]
 
-            # if request.POST[gen_para_blank_check] == "on":
-            #     parameter_list[gen_para] = "BLANK"
-            # elif request.POST[gen_para_not_blank_check] == "on":
-            #     parameter_list[gen_para] = "NOT_BLANK"
-            # else:
-            #     parameter_list[gen_para] = request.POST[gen_para_value]
-
         subject = request.POST['email-part-subject']
-        body = "test body"
+        body = "sample body for email"
+
+        if form.is_valid():
+            body = form.cleaned_data['content']
+        else:
+            form = ExampleFroalaForm()
+
         customise_general(access_token, request.session['filename'], parameter_list, subject, body)
         return HttpResponseRedirect(reverse("mail_sender:confirm_gen"))
-    return render(request, 'customise-general.html')
+    return render(request, 'customise-general.html', {'form': form, 'parameters': parameters})
 
 
 def confirm_gen(request):
@@ -125,13 +130,50 @@ def confirm_gen(request):
 
 
 def customise_vlz(request):
+    access_token = get_access_token(request=request,
+                                    redirect_uri=request.build_absolute_uri(reverse('mail_sender:gettoken')))
+
+    parameters = getParameters(request.session['vlz_report'])
+
+    form = ExampleFroalaForm(request.POST)
     if request.method == 'POST':
+        parameter_count = 1
+        if 'parameter_count' in request.COOKIES:
+            parameter_count = int(request.COOKIES['parameter_count'])
+        request.COOKIES['parameter_count'] = '1'
+        parameter_list = {}
+        for x in range(1, parameter_count + 1):
+            i = str(x)
+            vlz_para = 'vlz-para-' + i
+            vlz_para_value = 'vlz-para-' + i + '-value'
+            vlz_para_blank_check = 'vlz-para-' + i + '-blank-check'
+            vlz_para_not_blank_check = 'vlz-para-' + i + '-not-blank-check'
+
+            parameter_list[request.POST[vlz_para]] = request.POST[vlz_para_value]
+        subject = request.POST['email-part-subject']
+        body = "sample body"
+        if form.is_valid():
+            body = form.cleaned_data['content']
+        else:
+            form = ExampleFroalaForm()
+        customise_general(access_token=access_token, filename=request.session['vlz_report'],
+                          parameter_dict=parameter_list, subject=subject, body=body)
         return HttpResponseRedirect(reverse("mail_sender:confirm_vlz"))
-    return render(request, "customise_vlz.html")
+    return render(request, "customise_vlz.html", {'form': form, 'parameters': parameters})
 
 
 def confirm_vlz(request):
+    request.COOKIES['parameter_count'] = '1'
     form = ConfirmFormVLZ(request.POST)
     if request.method == 'POST':
-        return HttpResponseRedirect(reverse("mail_sender:send"))
+        if form.is_valid():
+            answer = form.cleaned_data['selection']
+            answer = dict(form.fields['selection'].choices)[answer]
+
+            if answer == "Yes":
+                return HttpResponseRedirect(reverse("mail_sender:customise_vlz"))
+            else:
+                return HttpResponseRedirect(reverse("mail_sender:send"))
+        else:
+            form = ConfirmFormVLZ()
     return render(request, 'confirm_vlz.html', {'form': form})
