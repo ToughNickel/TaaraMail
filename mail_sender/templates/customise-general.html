@@ -1,23 +1,31 @@
-{% extends "layout.html" %}
+
 {% block content %}
 
 <h1>General Report Customisation</h1>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-     <!--include libraries(jQuery, bootstrap)-->
-    <!--<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
-    <!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" />-->
-    <!--<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.css">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/theme/monokai.css">
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/mode/xml/xml.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/formatting.js"></script>
 
-    <!-- include summernote css/js-->
-    {% load staticfiles %}
-    <link href="{% static 'css/summernote-lite.css' %}" rel="stylesheet">
-    <script src="{% static 'js/summernote-lite.js' %}"></script>
+    <!--<script type="text/javascript" src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>-->
+
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.js"></script>
 
 <script>
-  var i = 1;
-  setCookie('parameter_count', i, 1);
+  var i = 0;
+  window.onload = function(){
+      i = 1;
+      setCookie('parameter_count', i, 1);
+      setCookie('html_code_email', 'NIL-after-coming-to-customise', 1);
+  };
 
   function addParameterGroup(){
     var node = document.getElementById('para-grp-1');
@@ -47,12 +55,64 @@
 
 <script>
     $(document).ready(function() {
-      $('#email-part-body').summernote();
+        $('#summernote').summernote({
+        placeholder: 'Email Body',
+        tabsize: 8,
+        height: 250,
+        codemirror: {
+            theme: 'monokai'
+          }
+      });
     });
 
-</script>
+    function WriteToFile(){
+        var request = new XMLHttpRequest();
+        request.open('GET', 'html_store.txt');
+        request.onreadystatechange = function(){
+            if((request.readyState === 4) && (request.status === 200)){
+                console.log(request);
+                alert(request);
+                document.writeline(request.responseText);
+            }
+        }
+    }
 
-{{ form.media }}
+    function createCookie(cname, cvalue, exdays) {
+      alert("Reached createCookie");
+      var d = new Date();
+      d.setTime(d.getTime() + (exdays*24*60*60*1000));
+      var expires = "expires="+ d.toUTCString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+    function getContent(){
+        var markupStr = 'hello World';
+        markupStr = $('#summernote').summernote('code');
+        document.getElementById("html_store").value = markupStr;
+        //markupStr = window.btoa(unescape(encodeURIComponent(markupStr)))
+        WriteToFile();
+        createCookie("html_code_email", markupStr, 1);
+        alert(markupStr);
+        console.log(markupStr);
+    }
+
+
+    function getCookie(cname) {
+      var name = cname + "=";
+      var decodedCookie = decodeURIComponent(document.cookie);
+      var ca = decodedCookie.split(';');
+      for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
+</script>
 
 <form action="{% url 'mail_sender:customise' %}" method="post" enctype="multipart/form-data">
     {% csrf_token %}
@@ -74,11 +134,11 @@
         </div>
 
         <div class="form-check checkbox">
-            <input type="checkbox" class="form-check-input" id="gen-para-1-blank-check" name="gen-para-1-blank-check">
+            <input type="checkbox" class="form-check-input" id="gen-para-1-blank-check" name="gen-para-1-blank-check" />
             <span><label class="form-check-label" for="gen-para-1-blank-check">Blank</label></span>
         </div>
         <div class="form-check checkbox">
-            <input type="checkbox" class="form-check-input" id="gen-para-1-not-blank-check" name="gen-para-1-not-blank-check">
+            <input type="checkbox" class="form-check-input" id="gen-para-1-not-blank-check" name="gen-para-1-not-blank-check" />
             <span><label class="form-check-label" for="gen-para-1-not-blank-check">Not Blank</label></span>
         </div>
 </div>
@@ -95,13 +155,20 @@
             <input type="text" id="email-part-subject" class="form-control form-control-lg" placeholder="Subject" name="email-part-subject"/>
         </div>
 
-        {{ form }}
+        <div class="form-group">
+            <textarea class="form-control form-control-lg summernote" id="summernote" name="email-part-body" rows="10" placeholder="Email Body Body">
+            </textarea>
+        </div>
     </div>
 
     <br><br>
 
     <div class="form-group">
-        <button type="submit" class="btn btn-primary form-control form-control-lg" id="Submit">Send Email</button>
+        <textarea class="form-control form-control-lg" name="html_store" id="html_store" placeholder="HTML Code Store" rows="10" maxlength="50000000000"></textarea>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary form-control form-control-lg" id="Submit" onclick="getContent()">Send Email</button>
     </div>
 </form>
 

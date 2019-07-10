@@ -10,6 +10,22 @@ from django.core.files.storage import FileSystemStorage
 from .customise_general import customise_general
 from .froala_form_example import ExampleFroalaForm
 from .get_parameters import getParameters
+from .Image import Image, DjangoAdapter
+from TaaraMail.settings import MEDIA_ROOT
+
+
+from os.path import isfile, join
+from mimetypes import MimeTypes
+from os import listdir
+from wand.image import Image
+import wand.image
+import hashlib
+import json
+import hmac
+import copy
+import sys
+import os
+import base64
 
 
 def home(request):
@@ -73,7 +89,9 @@ def upload(request):
         request.session['filename'] = myfile.name
         request.session['vlz_report'] = myfile_2.name
         request.session['parameter_count'] = 0
-        return HttpResponseRedirect(reverse("mail_sender:customise"))
+        response = HttpResponseRedirect(reverse("mail_sender:customise"))
+        response.set_cookie("html_code_email", "NIL")
+        return response
     return render(request, 'upload.html')
 
 
@@ -82,7 +100,6 @@ def customise(request):
                                     redirect_uri=request.build_absolute_uri(reverse('mail_sender:gettoken')))
 
     parameters = getParameters(filename=request.session['filename'])
-    form = ExampleFroalaForm(request.POST)
 
     if request.method == 'POST':
         parameter_count = 1
@@ -100,16 +117,17 @@ def customise(request):
             parameter_list[request.POST[gen_para]] = request.POST[gen_para_value]
 
         subject = request.POST['email-part-subject']
-        body = "sample body for email"
+        body = request.POST['html_store']
 
-        if form.is_valid():
-            body = form.cleaned_data['content']
-        else:
-            form = ExampleFroalaForm()
+        # if 'html_code_email' in request.COOKIES:
+        #     body = request.COOKIES['html_code_email']
+        #     body = base64.urlsafe_b64encode(body.encode('utf-8')).decode('ascii')
 
         customise_general(access_token, request.session['filename'], parameter_list, subject, body)
-        return HttpResponseRedirect(reverse("mail_sender:confirm_gen"))
-    return render(request, 'customise-general.html', {'form': form, 'parameters': parameters})
+        response = HttpResponseRedirect(reverse("mail_sender:confirm_gen"))
+        response.delete_cookie("html_code_email")
+        return response
+    return render(request, 'customise-general.html', {'parameters': parameters, 'media_root': MEDIA_ROOT})
 
 
 def confirm_gen(request):
@@ -151,7 +169,6 @@ def customise_vlz(request):
 
             parameter_list[request.POST[vlz_para]] = request.POST[vlz_para_value]
         subject = request.POST['email-part-subject']
-        body = "sample body"
         if form.is_valid():
             body = form.cleaned_data['content']
         else:
@@ -177,3 +194,31 @@ def confirm_vlz(request):
         else:
             form = ConfirmFormVLZ()
     return render(request, 'confirm_vlz.html', {'form': form})
+
+
+def upload_image(request):
+    try:
+        response = Image.upload(DjangoAdapter(request), "/public/")
+    except Exception:
+        response = {"error": str(sys.exc_info()[1])}
+    return HttpResponse(json.dumps(response), content_type="application/json")
+
+
+def upload_image_validation(request):
+
+    def validation(filePath, mimetype):
+        with wand.image.Image(filename=filePath) as img:
+            if img.width != img.height:
+                return False
+            return True
+
+    options = {
+        "fieldname": "myImage",
+        "validation": validation
+    }
+
+    try:
+        response = Image.upload(DjangoAdapter(request), "/public/", options)
+    except Exception:
+        response = {"error": str(sys.exc_info()[1])}
+    return HttpResponse(json.dumps(response), content_type="application/json")
