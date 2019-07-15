@@ -17,7 +17,9 @@ def customise_general(access_token, filename, parameter_dict, subject, body):
 
     decisive_index = 0
 
-    if "column".lower().strip() in str(sheet.cell_value(decisive_index, 1)).lower().strip() or "Taara".lower().strip() in str(sheet.cell_value(decisive_index, 0)).lower().strip():
+    if "column".lower().strip() in str(sheet.cell_value(decisive_index, 1)).lower().strip() or \
+            "Taara".lower().strip() in str(sheet.cell_value(decisive_index, 0)).lower().strip() or \
+            "".lower().strip() in str(sheet.cell_value(decisive_index, 1)).lower().strip():
         decisive_index = decisive_index + 1
 
     for i in range(0, number_of_cols):

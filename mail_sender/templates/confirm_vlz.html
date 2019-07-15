@@ -1,34 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Confirming about VLZ report usage</title>
-</head>
-<body>
-
 {% extends "layout.html" %}
 {% block content %}
 
 <h1>Reached here after sending a mail from VLZ report !</h1>
 
-<!--<form method="get">-->
-    <!--{% csrf_token %}-->
-    <!--<div class="form-group">-->
-        <!--<label><span>Do you want to send more mails from VLZ report ?</span></label>-->
-        <!--<select class="form-control form-control-lg" id= "vlz-confirm-select" name= "vlz-confirm-select">-->
-            <!--<option>Yes</option>-->
-            <!--<option>No, That's it for today</option>-->
-        <!--</select>-->
-    <!--</div>-->
-
-    <!--<div class="form-group">-->
-        <!--<input type="submit" id="submit" class="form-control form-control-lg" value="Submit"/>-->
-    <!--</div>-->
-<!--</form>-->
-
 <form action="{% url 'mail_sender:confirm_vlz' %}" method="post" novalidate>
-         {{ form.as_p }}
-         <p><input type="submit" value="Submit"></p>
+    {{ form.as_p }}
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary form-control" value="Submit"></button>
+    </div>
      {% csrf_token %}
 </form>
 

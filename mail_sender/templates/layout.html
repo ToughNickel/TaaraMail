@@ -6,22 +6,11 @@
     {% load staticfiles %}
     <link rel="stylesheet" href="{% static 'css/home.css' %}"/>
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/bootstrap-grid.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/bootstrap-reboot.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/bootstrap-reboot.min.css' %}"/>
-
-
-
-
 
 </head>
-<body>
-<body style="padding-top: 70px;">
-
-  <div class="container main-container">
-    {% block content %}{% endblock %}
-  </div>
-</body>
+    <body style="padding-top: 70px;padding-left: 80px;">
+        <div class="container main-container">
+            {% block content %}{% endblock %}
+        </div>
+    </body>
 </html>

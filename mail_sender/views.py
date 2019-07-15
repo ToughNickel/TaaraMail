@@ -1,31 +1,17 @@
 from django.shortcuts import render
 import time
 from django.urls import reverse
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponseRedirect, JsonResponse
 from .authhelper import get_signin_url, get_token_from_code, get_access_token
 from .outlookservice import get_me, get_my_messages
 from .confirm_gen import ConfirmForm
 from .confirm_vlz import ConfirmFormVLZ
 from django.core.files.storage import FileSystemStorage
 from .customise_general import customise_general
-from .froala_form_example import ExampleFroalaForm
 from .get_parameters import getParameters
-from .Image import Image, DjangoAdapter
+# from .ckeditor_form import EmailComponent
+from .summernote_form import EmailComponent
 from TaaraMail.settings import MEDIA_ROOT
-
-
-from os.path import isfile, join
-from mimetypes import MimeTypes
-from os import listdir
-from wand.image import Image
-import wand.image
-import hashlib
-import json
-import hmac
-import copy
-import sys
-import os
-import base64
 
 
 def home(request):
@@ -101,6 +87,8 @@ def customise(request):
 
     parameters = getParameters(filename=request.session['filename'])
 
+    form = EmailComponent(request.POST)
+
     if request.method == 'POST':
         parameter_count = 1
         if 'parameter_count' in request.COOKIES:
@@ -117,7 +105,12 @@ def customise(request):
             parameter_list[request.POST[gen_para]] = request.POST[gen_para_value]
 
         subject = request.POST['email-part-subject']
-        body = request.POST['html_store']
+        body = "Sample Body"
+
+        if form.is_valid():
+            body = form.data['content']
+        else:
+            form = EmailComponent()
 
         # if 'html_code_email' in request.COOKIES:
         #     body = request.COOKIES['html_code_email']
@@ -127,7 +120,7 @@ def customise(request):
         response = HttpResponseRedirect(reverse("mail_sender:confirm_gen"))
         response.delete_cookie("html_code_email")
         return response
-    return render(request, 'customise-general.html', {'parameters': parameters, 'media_root': MEDIA_ROOT})
+    return render(request, 'customise-general.html', {'form': form, 'parameters': parameters, 'media_root': MEDIA_ROOT})
 
 
 def confirm_gen(request):
@@ -152,8 +145,6 @@ def customise_vlz(request):
                                     redirect_uri=request.build_absolute_uri(reverse('mail_sender:gettoken')))
 
     parameters = getParameters(request.session['vlz_report'])
-
-    form = ExampleFroalaForm(request.POST)
     if request.method == 'POST':
         parameter_count = 1
         if 'parameter_count' in request.COOKIES:
@@ -168,15 +159,13 @@ def customise_vlz(request):
             vlz_para_not_blank_check = 'vlz-para-' + i + '-not-blank-check'
 
             parameter_list[request.POST[vlz_para]] = request.POST[vlz_para_value]
+
         subject = request.POST['email-part-subject']
-        if form.is_valid():
-            body = form.cleaned_data['content']
-        else:
-            form = ExampleFroalaForm()
+        body = "sample email body"
         customise_general(access_token=access_token, filename=request.session['vlz_report'],
                           parameter_dict=parameter_list, subject=subject, body=body)
         return HttpResponseRedirect(reverse("mail_sender:confirm_vlz"))
-    return render(request, "customise_vlz.html", {'form': form, 'parameters': parameters})
+    return render(request, "customise_vlz.html", {'parameters': parameters})
 
 
 def confirm_vlz(request):
@@ -196,29 +185,5 @@ def confirm_vlz(request):
     return render(request, 'confirm_vlz.html', {'form': form})
 
 
-def upload_image(request):
-    try:
-        response = Image.upload(DjangoAdapter(request), "/public/")
-    except Exception:
-        response = {"error": str(sys.exc_info()[1])}
-    return HttpResponse(json.dumps(response), content_type="application/json")
-
-
-def upload_image_validation(request):
-
-    def validation(filePath, mimetype):
-        with wand.image.Image(filename=filePath) as img:
-            if img.width != img.height:
-                return False
-            return True
-
-    options = {
-        "fieldname": "myImage",
-        "validation": validation
-    }
-
-    try:
-        response = Image.upload(DjangoAdapter(request), "/public/", options)
-    except Exception:
-        response = {"error": str(sys.exc_info()[1])}
-    return HttpResponse(json.dumps(response), content_type="application/json")
+def summernote_upload(request):
+    render("This works")

@@ -16,16 +16,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url, include
+from django.views.decorators.cache import never_cache
+
 from mail_sender import views
 from django.conf import settings
 from django.conf.urls.static import static
+from ckeditor_uploader import views as uploader_views
+from django_summernote import urls
 
 urlpatterns = [
     # Invoke the home view in the mail_sender app by default
     url(r'^$', views.home, name='home'),
     url(r'^mail_sender/', include('mail_sender.urls', namespace='mail_sender')),
+    url(r'^ckeditor/upload/', uploader_views.upload, name='ckeditor_upload'),
+    url(r'^ckeditor/browse/', never_cache(uploader_views.browse), name='ckeditor_browse'),
+    url(r'^summernote/', include('django_summernote.urls')),
     path('admin/', admin.site.urls),
-]
-
-if settings.DEBUG:
-  urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

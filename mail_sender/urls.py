@@ -1,8 +1,9 @@
 from django.conf.urls import url
-from django.urls import include
-from django.conf.urls.static import static
-from django.conf import settings
+from django.urls import include, path
 from mail_sender import views
+from django.conf import settings
+from django.conf.urls.static import static
+import ckeditor_uploader.urls
 
 app_name = 'mail_sender'
 urlpatterns = [
@@ -18,8 +19,5 @@ urlpatterns = [
     url(r'^confirm_gen/', views.confirm_gen, name='confirm_gen'),
     url(r'^customise_vlz/$', views.customise_vlz, name='customise_vlz'),
     url(r'^confirm_vlz/', views.confirm_vlz, name='confirm_vlz'),
-    url(r'^froala_editor/', include('froala_editor.urls')),
-    url(r"^upload_image$", views.upload_image, name="upload_image"),
-    url(r"^upload_image_validation", views.upload_image_validation, name="upload_image_validation"),
-]
-'''+ static(settings.STATIC_URL, document_root=settings.STATIC_DIR) + static(settings.STATIC_PUBLIC_URL, document_root=settings.STATIC_PUBLIC_DIR)'''
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
