@@ -12,6 +12,7 @@ from .get_parameters import getParameters
 # from .ckeditor_form import EmailComponent
 from .summernote_form import EmailComponent
 from TaaraMail.settings import MEDIA_ROOT
+from .get_base64_encoded_img import replace_src_for_MIME
 
 
 def home(request):
@@ -109,14 +110,12 @@ def customise(request):
 
         if form.is_valid():
             body = form.data['content']
+            body, attachments = replace_src_for_MIME(body=body)
         else:
             form = EmailComponent()
 
-        # if 'html_code_email' in request.COOKIES:
-        #     body = request.COOKIES['html_code_email']
-        #     body = base64.urlsafe_b64encode(body.encode('utf-8')).decode('ascii')
-
-        customise_general(access_token, request.session['filename'], parameter_list, subject, body)
+        customise_general(access_token, request.session['filename'], parameter_list, subject, body,
+                          attachments=attachments)
         response = HttpResponseRedirect(reverse("mail_sender:confirm_gen"))
         response.delete_cookie("html_code_email")
         return response

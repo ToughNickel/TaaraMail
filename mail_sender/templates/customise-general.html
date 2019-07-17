@@ -51,67 +51,6 @@
   }
 </script>
 
-<script>
-    $(document).ready(function() {
-        $('#summernote').summernote({
-        placeholder: 'Email Body',
-        tabsize: 8,
-        height: 250,
-        codemirror: {
-            theme: 'monokai'
-        }
-      });
-    });
-
-    function WriteToFile(){
-        const request = new XMLHttpRequest();
-        request.open('GET', 'html_store.txt');
-        request.onreadystatechange = function(){
-            if((request.readyState === 4) && (request.status === 200)){
-                console.log(request);
-                alert(request.responseText);
-                document.writeline(request.responseText);
-            }
-        }
-    }
-
-    function createCookie(cname, cvalue, exdays) {
-      alert("Reached createCookie");
-      var d = new Date();
-      d.setTime(d.getTime() + (exdays*24*60*60*1000));
-      var expires = "expires="+ d.toUTCString();
-      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-    }
-
-    function getContent(){
-        var markupStr = 'hello World';
-        markupStr = $('#summernote').summernote('code');
-        document.getElementById("html_store").value = markupStr;
-        //markupStr = window.btoa(unescape(encodeURIComponent(markupStr)))
-        WriteToFile();
-        createCookie("html_code_email", markupStr, 1);
-        alert(markupStr);
-        console.log(markupStr);
-    }
-
-
-    function getCookie(cname) {
-      var name = cname + "=";
-      var decodedCookie = decodeURIComponent(document.cookie);
-      var ca = decodedCookie.split(';');
-      for(var i = 0; i <ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-          c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-          return c.substring(name.length, c.length);
-        }
-      }
-      return "";
-    }
-</script>
-
 <form id = "component" action="{% url 'mail_sender:customise' %}" method="post" enctype="multipart/form-data">
     {% csrf_token %}
     <div id="para-list">
@@ -153,24 +92,15 @@
             <input type="text" id="email-part-subject" class="form-control form-control-lg" placeholder="Subject" name="email-part-subject"/>
         </div>
 
-        {{ form.media }}
+        <div class="form-group">
+            {{ form.media }}
 
-        {{ form.as_p }}
+            {{ form.as_p }}
+        </div>
 
-        <!--<div class="form-group">-->
-            <!--<textarea class="form-control form-control-lg" id="summernote" name="email-part-body" rows="10" placeholder="Email Body Body">-->
-            <!--</textarea>-->
-        <!--</div>-->
     </div>
-
-    <!--<br><br>-->
-
-    <!--<div class="form-group">-->
-        <!--<textarea class="form-control form-control-lg" name="html_store" id="html_store" placeholder="HTML Code Store" rows="10" maxlength="50000000000"></textarea>-->
-    <!--</div>-->
-
     <div class="form-group">
-        <button type="submit" class="btn btn-primary form-control form-control-lg" id="Submit" onclick="getContent()">Send Email</button>
+        <button type="submit" class="btn btn-primary form-control form-control-lg" id="Submit">Send Email</button>
     </div>
 </form>
 

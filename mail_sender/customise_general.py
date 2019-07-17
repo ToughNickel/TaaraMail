@@ -5,7 +5,7 @@ from .outlookservice import send_my_message
 from TaaraMail.settings import LOGO_BASE64, METHOD_1_BASE64, METHOD_2_BASE64
 
 
-def customise_general(access_token, filename, parameter_dict, subject, body):
+def customise_general(access_token, filename, parameter_dict, subject, body, attachments):
     location = MEDIA_ROOT + filename
     wb = xlrd.open_workbook(location)
     sheet = wb.sheet_by_index(0)
@@ -86,5 +86,9 @@ def customise_general(access_token, filename, parameter_dict, subject, body):
                 },
                 "saveToSentItems": "true"
             }
+
+            if len(attachments) != 0:
+                payload['message']['Attachments'].extend(attachments)
+
             send_my_message(access_token=access_token, payload=payload)
             print("Send Email --> {}".format(sheet.cell_value(i, email_column)))
