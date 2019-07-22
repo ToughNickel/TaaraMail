@@ -1,7 +1,7 @@
 from django.shortcuts import render
 import time
 from django.urls import reverse
-from django.http import HttpResponseRedirect, JsonResponse
+from django.http import HttpResponseRedirect
 from .authhelper import get_signin_url, get_token_from_code, get_access_token
 from .outlookservice import get_me, get_my_messages
 from .confirm_gen import ConfirmForm
@@ -11,7 +11,6 @@ from .customise_general import customise_general
 from .get_parameters import getParameters
 # from .ckeditor_form import EmailComponent
 from .summernote_form import EmailComponent
-from TaaraMail.settings import MEDIA_ROOT
 from .get_base64_encoded_img import replace_src_for_MIME
 
 
@@ -103,7 +102,15 @@ def customise(request):
             gen_para_blank_check = 'gen-para-' + i + '-blank-check'
             gen_para_not_blank_check = 'gen-para-' + i + '-not-blank-check'
 
-            parameter_list[request.POST[gen_para]] = request.POST[gen_para_value]
+            if request.POST.get(gen_para_blank_check):
+                parameter_list[request.POST[gen_para]] = "BLANK"
+            elif request.POST.get(gen_para_not_blank_check):
+                parameter_list[request.POST[gen_para]] = "NOT_BLANK"
+            else:
+                parameter_list[request.POST[gen_para]] = request.POST[gen_para_value]
+
+            if request.POST.get(gen_para_blank_check) and request.POST.get(gen_para_not_blank_check):
+                parameter_list[request.POST[gen_para]] = request.POST[gen_para_value]
 
         subject = request.POST['email-part-subject']
         body = "Sample Body"
@@ -119,7 +126,7 @@ def customise(request):
         response = HttpResponseRedirect(reverse("mail_sender:confirm_gen"))
         response.delete_cookie("html_code_email")
         return response
-    return render(request, 'customise-general.html', {'form': form, 'parameters': parameters, 'media_root': MEDIA_ROOT})
+    return render(request, 'customise-general.html', {'form': form, 'parameters': parameters})
 
 
 def confirm_gen(request):
@@ -144,6 +151,9 @@ def customise_vlz(request):
                                     redirect_uri=request.build_absolute_uri(reverse('mail_sender:gettoken')))
 
     parameters = getParameters(request.session['vlz_report'])
+
+    form = EmailComponent(request.POST)
+
     if request.method == 'POST':
         parameter_count = 1
         if 'parameter_count' in request.COOKIES:
@@ -157,14 +167,30 @@ def customise_vlz(request):
             vlz_para_blank_check = 'vlz-para-' + i + '-blank-check'
             vlz_para_not_blank_check = 'vlz-para-' + i + '-not-blank-check'
 
-            parameter_list[request.POST[vlz_para]] = request.POST[vlz_para_value]
+            if request.POST.get(vlz_para_blank_check):
+                parameter_list[request.POST[vlz_para]] = "BLANK"
+            elif request.POST.get(vlz_para_not_blank_check):
+                parameter_list[request.POST[vlz_para]] = "NOT_BLANK"
+            else:
+                parameter_list[request.POST[vlz_para]] = request.POST[vlz_para_value]
+
+            if request.POST.get(vlz_para_blank_check) and request.POST.get(vlz_para_not_blank_check):
+                parameter_list[request.POST[vlz_para]] = request.POST[vlz_para_value]
 
         subject = request.POST['email-part-subject']
         body = "sample email body"
+
+        attachments = []
+        if form.is_valid():
+            body = form.data['content']
+            body, attachments = replace_src_for_MIME(body=body)
+        else:
+            form = EmailComponent()
+
         customise_general(access_token=access_token, filename=request.session['vlz_report'],
-                          parameter_dict=parameter_list, subject=subject, body=body)
+                          parameter_dict=parameter_list, subject=subject, body=body, attachments=attachments)
         return HttpResponseRedirect(reverse("mail_sender:confirm_vlz"))
-    return render(request, "customise_vlz.html", {'parameters': parameters})
+    return render(request, "customise_vlz.html", {'form': form, 'parameters': parameters})
 
 
 def confirm_vlz(request):
@@ -182,7 +208,3 @@ def confirm_vlz(request):
         else:
             form = ConfirmFormVLZ()
     return render(request, 'confirm_vlz.html', {'form': form})
-
-
-def summernote_upload(request):
-    render("This works")

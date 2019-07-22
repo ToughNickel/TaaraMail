@@ -5,16 +5,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-     <!--include libraries(jQuery, bootstrap)-->
-    <!--<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
-    <!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" />-->
-    <!--<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
-
-    <!-- include summernote css/js-->
-    {% load staticfiles %}
-    <link href="{% static 'css/summernote-bs4.css' %}" rel="stylesheet">
-    <script src="{% static 'js/summernote-bs4.js' %}"></script>
-
 <script>
   var i = 1;
   setCookie('parameter_count', i, 1);
@@ -43,17 +33,6 @@
       document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
   }
 </script>
-
-<link href="https://cdn.jsdelivr.net/npm/froala-editor@3.0.0-beta.1/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
-
-<script>
-    $(document).ready(function() {
-      $('#summernote').summernote();
-    });
-</script>
-
-
-    {{ form.media }}
 
 <form method="post" action="{% url 'mail_sender:customise_vlz' %}" enctype="multipart/form-data">
     {% csrf_token %}
@@ -94,7 +73,10 @@
         <div class="form-group">
             <input type="text" id="email-part-subject" class="form-control form-control-lg" placeholder="Subject" name="email-part-subject"/>
         </div>
-        {{ form }}
+        <div class="form-group">
+            {{ form.media }}
+            {{ form.as_p }}
+        </div>
     </div>
 
     <br><br>
