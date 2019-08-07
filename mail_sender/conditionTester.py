@@ -21,6 +21,13 @@ def conditionTester(filename, parameter_dict, parameter_col_dict, i):
         if ".0" in cell_value:
             cell_value = cell_value.replace(".0", "")
 
+        # handling for FALSE and TRUE cases value
+        if str(parameter_dict[k].lower().strip()) in ["true", "false"]:
+            if cell_value == "1":
+                cell_value = "true"
+            elif cell_value == "0":
+                cell_value = "false"
+
         # deciding whether condition is for a value or for it not being blank/not blank
 
         if parameter_dict[k].lower().strip() == "blank":

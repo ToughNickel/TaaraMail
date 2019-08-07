@@ -19,7 +19,7 @@ def customise_general(access_token, filename, parameter_dict, subject, body, att
 
     if "column".lower().strip() in str(sheet.cell_value(decisive_index, 1)).lower().strip() or \
             "Taara".lower().strip() in str(sheet.cell_value(decisive_index, 0)).lower().strip() or \
-            "".lower().strip() in str(sheet.cell_value(decisive_index, 1)).lower().strip():
+            str(sheet.cell_value(decisive_index, 1)).lower().strip() == "":
         decisive_index = decisive_index + 1
 
     for i in range(0, number_of_cols):
@@ -35,7 +35,7 @@ def customise_general(access_token, filename, parameter_dict, subject, body, att
                 parameter_col_dict[k] = i
                 break
 
-    for i in range(2, number_of_rows):
+    for i in range(decisive_index + 1, number_of_rows):
         if conditionTester(filename=filename, parameter_dict=parameter_dict, parameter_col_dict=parameter_col_dict,
                            i=i):
             TO = sheet.cell_value(i, email_column)
@@ -59,6 +59,14 @@ def customise_general(access_token, filename, parameter_dict, subject, body, att
                             }
                         }
                     ],
+                    # "CcRecipients": [
+                    #     {
+                    #         "emailAddress": {
+                    #             "name": "Taara VMInclusion",
+                    #             "address": "taara_vminclusion@vmware.com"
+                    #         }
+                    #     }
+                    # ],
                     "Attachments": [
                         {
                             "@odata.type": "#microsoft.graph.fileAttachment",

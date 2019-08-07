@@ -4,30 +4,8 @@
     <list default="true" id="0328013b-57c0-470f-acef-05705eed4c84" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/excel-reader-test.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/excel-reader-test.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mail_sender/conditionTester.py" beforeDir="false" afterPath="$PROJECT_DIR$/mail_sender/conditionTester.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mail_sender/get_parameters.py" beforeDir="false" afterPath="$PROJECT_DIR$/mail_sender/get_parameters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mail_sender/templates/customise-general.html" beforeDir="false" afterPath="$PROJECT_DIR$/mail_sender/templates/customise-general.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mail_sender/templates/customise_vlz.html" beforeDir="false" afterPath="$PROJECT_DIR$/mail_sender/templates/customise_vlz.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mail_sender/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mail_sender/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/django-summernote/2019-07-15/1e35d05f-55b2-45b7-934b-25c380d4e47f.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/django-summernote/2019-07-16/3a8621c4-79d2-4d1c-92e0-e1fcff788455.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/django-summernote/2019-07-16/3d4c68bf-9b0b-432d-891a-d229cbafc412.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/django-summernote/2019-07-16/4010b4c1-dab9-4039-aa0e-3f6833e0158b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/django-summernote/2019-07-16/4acede51-527c-4d8e-bc77-74214d6696fa.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/django-summernote/2019-07-16/87dfa74c-e0f1-4810-9bdf-dcedc7418582.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/django-summernote/2019-07-16/ff4ab54e-3aa2-4c9c-8798-e5af7ea264c8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/django-summernote/2019-07-17/20783f96-6c46-41a6-b310-37b728b8d403.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/django-summernote/2019-07-17/38cb472a-5daa-421d-a70a-3d08d98d6867.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/django-summernote/2019-07-17/3dd28c68-338e-4fd3-821b-3dfedd1a13fa.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/django-summernote/2019-07-17/55f23b35-53bb-4e77-81a1-bc1ae7217003.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/django-summernote/2019-07-17/9079fd07-77f0-4932-91d3-07b8dd1e2005.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/django-summernote/2019-07-17/97f6251f-6169-4d14-8d26-226fe37b8572.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/django-summernote/2019-07-17/9817e596-01c7-4133-97e0-3bfba694e273.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/django-summernote/2019-07-17/a319a1e7-f222-4ed4-8006-c6bcdcf5c331.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/django-summernote/2019-07-17/ad285ac4-cfb7-4e5e-bacc-e6dac9dd99be.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/django-summernote/2019-07-17/b7dee262-37f6-48bc-b757-ca2fc80a2a2a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/django-summernote/2019-07-17/caf834f6-a355-4788-b8eb-32b2590fab00.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mail_sender/customise_general.py" beforeDir="false" afterPath="$PROJECT_DIR$/mail_sender/customise_general.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,10 +18,43 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mail_sender/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="100" column="55" lean-forward="true" selection-start-line="100" selection-start-column="55" selection-end-line="100" selection-end-column="55" />
+            <state relative-caret-position="-49">
+              <caret line="77" column="73" lean-forward="true" selection-start-line="77" selection-start-column="73" selection-end-line="77" selection-end-column="73" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mail_sender/customise_general.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="4" column="76" lean-forward="true" selection-start-line="4" selection-start-column="76" selection-end-line="4" selection-end-column="76" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TaaraMail/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="15" column="70" lean-forward="true" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mail_sender/conditionTester.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="69" lean-forward="true" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -106,14 +117,14 @@
         <option value="$PROJECT_DIR$/TaaraMail/urls.py" />
         <option value="$PROJECT_DIR$/mail_sender/summernote_form.py" />
         <option value="$PROJECT_DIR$/TaaraMail/settings.py" />
-        <option value="$PROJECT_DIR$/mail_sender/customise_general.py" />
         <option value="$PROJECT_DIR$/mail_sender/_base64_converter.py" />
         <option value="$PROJECT_DIR$/mail_sender/get_base64_encoded_img.py" />
-        <option value="$PROJECT_DIR$/mail_sender/conditionTester.py" />
         <option value="$PROJECT_DIR$/mail_sender/templates/customise_vlz.html" />
         <option value="$PROJECT_DIR$/mail_sender/views.py" />
         <option value="$PROJECT_DIR$/mail_sender/get_parameters.py" />
         <option value="$PROJECT_DIR$/mail_sender/templates/customise-general.html" />
+        <option value="$PROJECT_DIR$/mail_sender/conditionTester.py" />
+        <option value="$PROJECT_DIR$/mail_sender/customise_general.py" />
       </list>
     </option>
   </component>
@@ -128,6 +139,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -160,13 +172,18 @@
             <path>
               <item name="TaaraMail" type="b2602c69:ProjectViewProjectNode" />
               <item name="TaaraMail" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+              <item name="django-summernote" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TaaraMail" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TaaraMail" type="462c0819:PsiDirectoryNode" />
               <item name="TaaraMail" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -175,19 +192,19 @@
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/mail_sender/static/css" />
-      <recent name="$PROJECT_DIR$/mail_sender/templates" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/mail_sender" />
-      <recent name="$PROJECT_DIR$/mail_sender/static" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/mail_sender/static" />
       <recent name="$PROJECT_DIR$/mail_sender/static/css" />
       <recent name="$PROJECT_DIR$/static/js" />
       <recent name="$PROJECT_DIR$/static/css" />
       <recent name="$PROJECT_DIR$/mail_sender/static/js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mail_sender/static/css" />
+      <recent name="$PROJECT_DIR$/mail_sender/templates" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/mail_sender" />
+      <recent name="$PROJECT_DIR$/mail_sender/static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -261,10 +278,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <frame x="1680" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15310428" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12532912" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -275,8 +292,8 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32959184" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32970297" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49246535" visible="true" weight="0.29795918" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5075347" side_tool="true" weight="0.26734695" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4918378" visible="true" weight="0.27128714" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5081622" side_tool="true" weight="0.2891089" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32970297" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -331,13 +348,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Pushing the changes" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mail_sender/templates/confirm_vlz.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mail_sender/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -458,43 +468,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/media/django-summernote/2019-07-15/1e35d05f-55b2-45b7-934b-25c380d4e47f.png" />
     <entry file="file://$PROJECT_DIR$/media/django-summernote/2019-07-16/3a8621c4-79d2-4d1c-92e0-e1fcff788455.jpg" />
-    <entry file="file://$PROJECT_DIR$/TaaraMail/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2028">
-          <caret line="140" column="36" lean-forward="true" selection-start-line="140" selection-start-column="36" selection-end-line="140" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mail_sender/filtered_selection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2880">
-          <caret line="195" column="101" selection-start-line="195" selection-start-column="101" selection-end-line="195" selection-end-column="101" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mail_sender/_base64_converter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mail_sender/get_base64_encoded_img.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mail_sender/outlookservice.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -515,16 +488,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mail_sender/customise_general.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="33" column="72" lean-forward="true" selection-start-line="33" selection-start-column="72" selection-end-line="33" selection-end-column="72" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mail_sender/get_parameters.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -539,16 +502,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="447">
           <caret line="69" column="46" selection-start-line="69" selection-start-column="46" selection-end-line="69" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mail_sender/conditionTester.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="64" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -576,10 +529,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mail_sender/_base64_converter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="60" lean-forward="true" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail_sender/get_base64_encoded_img.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="55" lean-forward="true" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/method2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail_sender/filtered_selection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2025">
+          <caret line="135" column="57" lean-forward="true" selection-start-line="135" selection-start-column="57" selection-end-line="135" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail_sender/conditionTester.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="69" lean-forward="true" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaaraMail/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="15" column="70" lean-forward="true" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail_sender/customise_general.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="76" lean-forward="true" selection-start-line="4" selection-start-column="76" selection-end-line="4" selection-end-column="76" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mail_sender/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="100" column="55" lean-forward="true" selection-start-line="100" selection-start-column="55" selection-end-line="100" selection-end-column="55" />
+        <state relative-caret-position="-49">
+          <caret line="77" column="73" lean-forward="true" selection-start-line="77" selection-start-column="73" selection-end-line="77" selection-end-column="73" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
