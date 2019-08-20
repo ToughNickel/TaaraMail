@@ -48,8 +48,8 @@ def customise_general(access_token, filename, parameter_dict, subject, body, att
                     },
                     "from": {
                         "emailAddress": {
-                            "name": "Taara VMInclusion",
-                            "address": "taara_vminclusion@vmware.com"
+                            "name": "Corporate View Team",
+                            "address": "corp-view-team@vmware.com"
                         }
                     },
                     "toRecipients": [
