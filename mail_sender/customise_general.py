@@ -3,6 +3,7 @@ from TaaraMail.settings import MEDIA_ROOT
 from .conditionTester import conditionTester
 from .outlookservice import send_my_message
 from TaaraMail.settings import LOGO_BASE64, METHOD_1_BASE64, METHOD_2_BASE64
+from .entryWiseValueInsertion import Entry_wise_value_conversion
 
 
 def customise_general(access_token, filename, parameter_dict, subject, body, attachments):
@@ -39,12 +40,19 @@ def customise_general(access_token, filename, parameter_dict, subject, body, att
         if conditionTester(filename=filename, parameter_dict=parameter_dict, parameter_col_dict=parameter_col_dict,
                            i=i):
             TO = sheet.cell_value(i, email_column)
+
+            # Adding the respective salutation
+            # Entry Wise Value Conversion
+
+            body_modified = Entry_wise_value_conversion(body=body, filename=filename, row_number=i)
+
+            # --------------------------------
             payload = {
                 "message": {
                     "subject": subject,
                     "body": {
                         "contentType": "html",
-                        "content": body
+                        "content": body_modified
                     },
                     "from": {
                         "emailAddress": {

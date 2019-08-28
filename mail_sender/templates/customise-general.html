@@ -49,47 +49,97 @@
       var expires = "expires="+ d.toUTCString();
       document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
   }
+
+
+  function appendCustomValue(){
+      var value = document.getElementById('email-custom-salutation');
+
+  }
+
 </script>
 
 <form id = "component" action="{% url 'mail_sender:customise' %}" method="post" enctype="multipart/form-data">
     {% csrf_token %}
     <div id="para-list">
-    <div id="para-grp-1">
-        <div class="form-group"><br><br></div>
-      <div class="form-group">
-        <label for="gen-para-1">Parameter select</label>
-        <select class="form-control form-control-lg" id="gen-para-1" name="gen-para-1">
+        <div id="para-grp-1">
 
-            {% for parameter in parameters %}
-                <option>{{ parameter }}</option>
-            {% endfor %}
-        </select>
-      </div>
-        <div class="form-group">
-            <label for="gen-para-1-value">Value Desired</label>
-            <input id="gen-para-1-value" class="form-control form-control-lg" type="text" placeholder="Value" name="gen-para-1-value">
-        </div>
+            <div class="form-group">
+                <br><br>
+            </div>
 
-        <div class="form-check checkbox">
-            <input type="checkbox" class="form-check-input" id="gen-para-1-blank-check" name="gen-para-1-blank-check" />
-            <span><label class="form-check-label" for="gen-para-1-blank-check">Blank</label></span>
+            <div class="form-group">
+                <label for="gen-para-1">Parameter select</label>
+                <select class="form-control form-control-lg" id="gen-para-1" name="gen-para-1">
+
+                    {% for parameter in parameters %}
+                        <option>{{ parameter }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="gen-para-1-value">Value Desired</label>
+                <input id="gen-para-1-value" class="form-control form-control-lg" type="text" placeholder="Value" name="gen-para-1-value">
+            </div>
+
+            <div class="form-check checkbox">
+                <input type="checkbox" class="form-check-input" id="gen-para-1-blank-check" name="gen-para-1-blank-check" />
+                <span><label class="form-check-label" for="gen-para-1-blank-check">Blank</label></span>
+            </div>
+
+            <div class="form-check checkbox">
+                <input type="checkbox" class="form-check-input" id="gen-para-1-not-blank-check" name="gen-para-1-not-blank-check" />
+                <span><label class="form-check-label" for="gen-para-1-not-blank-check">Not Blank</label></span>
+            </div>
+
         </div>
-        <div class="form-check checkbox">
-            <input type="checkbox" class="form-check-input" id="gen-para-1-not-blank-check" name="gen-para-1-not-blank-check" />
-            <span><label class="form-check-label" for="gen-para-1-not-blank-check">Not Blank</label></span>
-        </div>
-</div>
     </div>
 
-    <div class="form-group"><br><br></div>
+    <div class="form-group">
+        <br><br>
+    </div>
+
+
     <div class="form-group">
         <input type="button" id="add-para" class="btn btn-primary form-control form-control-lg" value="+" onclick="addParameterGroup();"/>
     </div>
-        <div class="form-group"><br><br></div>
+
+
+    <div class="form-group">
+        <br><br>
+    </div>
 
     <div id="email-part">
         <div class="form-group">
             <input type="text" id="email-part-subject" class="form-control form-control-lg" placeholder="Subject" name="email-part-subject"/>
+        </div>
+
+         <div class="form-group">
+            <br><br>
+        </div>
+
+        <div class="form-group">
+            <label for="email-custom-salutation" >Add Custom Value from the Excel file</label>
+            <select class="form-control form-control-lg" id="email-custom-salutation" name="email-custom-salutation">
+
+                {% for parameter in parameters %}
+                    <option>{{ parameter }}</option>
+                {% endfor %}
+
+            </select>
+
+             <div class="form-group">
+                <br><br>
+            </div>
+
+             <div class="form-group">
+                <input type="button" id="add-email-custom-salutation" class="btn btn-primary form-control form-control-lg" value="Add the Value" onclick="appendCustomValue();"/>
+             </div>
+
+             <div class="form-group">
+                <br><br>
+            </div>
+
         </div>
 
         <div class="form-group">
@@ -98,6 +148,7 @@
             {{ form.as_p }}
         </div>
     </div>
+
     <div class="form-group">
         <button type="submit" class="btn btn-primary form-control form-control-lg" id="Submit">Send Email</button>
     </div>
