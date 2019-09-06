@@ -26,6 +26,8 @@ def customise_general(access_token, filename, parameter_dict, subject, body, att
     for i in range(0, number_of_cols):
         if sheet.cell_value(decisive_index, i).lower().strip() == "email".lower().strip():
             email_column = i
+            print("\n\n\n\n ******************** EMAIL COLUMN FOUND AT *********************** \n\n", email_column,
+                  "\n\n\n\n\n")
             break
 
     parameter_col_dict = {}
@@ -90,7 +92,6 @@ def customise_general(access_token, filename, parameter_dict, subject, body, att
                             "ContentId": "method_1_support",
                             "ContentBytes": METHOD_1_BASE64
                         },
-
                         {
                             "@odata.type": "#microsoft.graph.fileAttachment",
                             "Name": "method2.jpg",
@@ -100,7 +101,7 @@ def customise_general(access_token, filename, parameter_dict, subject, body, att
                         }
                     ]
                 },
-                "saveToSentItems": "true"
+                "saveToSentItems": "false"
             }
 
             if len(attachments) != 0:

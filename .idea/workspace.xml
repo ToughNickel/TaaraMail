@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0328013b-57c0-470f-acef-05705eed4c84" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mail_sender/entryWiseValueInsertion.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/excel-reader-test.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/excel-reader-test.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mail_sender/customise_general.py" beforeDir="false" afterPath="$PROJECT_DIR$/mail_sender/customise_general.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mail_sender/templates/customise-general.html" beforeDir="false" afterPath="$PROJECT_DIR$/mail_sender/templates/customise-general.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mail_sender/entryWiseValueInsertion.py" beforeDir="false" afterPath="$PROJECT_DIR$/mail_sender/entryWiseValueInsertion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
