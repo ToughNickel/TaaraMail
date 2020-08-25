@@ -5,8 +5,8 @@ import time
 import requests
 
 # Client ID and secret
-client_id = 'b08a4714-10df-4336-aece-2ef4d9ffd1fd'
-client_secret = 'hqcSJ41_eoywAFIHV497_-*'
+client_id = None
+client_secret = None
 
 # Constant strings for OAuth2 flow
 # The OAuth authority
